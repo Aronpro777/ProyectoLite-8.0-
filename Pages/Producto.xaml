@@ -7,35 +7,18 @@
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
-            <Image Source="{Binding Imagen}" 
+            <Image Source="{Binding Receta.Imagen}" 
                    Aspect="AspectFill"
                    HeightRequest="300"
                    HorizontalOptions="Fill"/>
 
-            <Label Text="{Binding Titulo}" 
+            <Label Text="{Binding Receta.Titulo}" 
                    FontSize="24"
                    FontAttributes="Bold"
                    HorizontalOptions="Center"/>
 
-            <Label Text="{Binding Descripcion}" 
-                   FontSize="16"
-                   TextType="Html"/>
-
-            <Label Text="Ingredientes:" 
-                   FontSize="20"
-                   FontAttributes="Bold"/>
-
-            <Label Text="{Binding Ingredientes}" 
-                   FontSize="16"
-                   TextType="Html"/>
-
-            <Label Text="Instrucciones:" 
-                   FontSize="20"
-                   FontAttributes="Bold"/>
-
-            <Label Text="{Binding Instrucciones}" 
-                   FontSize="16"
-                   TextType="Html"/>
+            <Label Text="{Binding Receta.Descripcion}" 
+                   FontSize="16"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
