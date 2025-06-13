@@ -36,6 +36,7 @@
                        Padding="15">
                     <StackLayout Spacing="15">
                         <Entry x:Name="EntryUsername"
+                               Text="Abraham"
                                Placeholder="Nombre de Usuario"
                                PlaceholderColor="#8D8D8D"
                                TextColor="#42251B"
@@ -44,6 +45,7 @@
                                Keyboard="Text"/>
 
                         <Entry x:Name="EntryPassword"
+                               Text="123"
                                Placeholder="Contraseña"
                                PlaceholderColor="#8D8D8D"
                                TextColor="#42251B"

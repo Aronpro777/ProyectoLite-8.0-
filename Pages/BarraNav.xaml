@@ -11,12 +11,10 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Image Source="icon_home.png" Grid.Column="0" HeightRequest="24" HorizontalOptions="Center"/>
-        <Image Source="icon_search.png" Grid.Column="1" HeightRequest="24" HorizontalOptions="Center"/>
-        <Image Source="icon_user.png" Grid.Column="4" HeightRequest="24" HorizontalOptions="Center"/>
+        <ImageButton BackgroundColor="Transparent" Source="icon_home.png" Grid.Column="0" HeightRequest="40" HorizontalOptions="Center" Padding="0"/>
+        <ImageButton BackgroundColor="Transparent" Source="icon_search.png" Grid.Column="1" HeightRequest="40" HorizontalOptions="Center"/>
+        <ImageButton BackgroundColor="Transparent" Source="icon_user.png" Grid.Column="4" HeightRequest="40" HorizontalOptions="Center"/>
     </Grid>
 </ContentView>

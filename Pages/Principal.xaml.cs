@@ -35,9 +35,13 @@ namespace ProyectoLite__8._0_.Pages
             }
         }
 
-        private async void OnRecipeTapped(object sender, TappedEventArgs e)
+        // Método para manejar el evento Clicked
+        private async void OnRecipeTapped(object sender, EventArgs e)
         {
-            if (e.Parameter is int recipeId)
+            var imageButton = sender as ImageButton;
+            var recipeId = imageButton?.CommandParameter;
+
+            if (recipeId != null)
             {
                 await Shell.Current.GoToAsync($"Producto?RecetaId={recipeId}");
             }
