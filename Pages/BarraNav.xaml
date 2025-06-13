@@ -10,11 +10,9 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <ImageButton BackgroundColor="Transparent" Source="icon_home.png" Grid.Column="0" HeightRequest="40" HorizontalOptions="Center" Padding="0"/>
-        <ImageButton BackgroundColor="Transparent" Source="icon_search.png" Grid.Column="1" HeightRequest="40" HorizontalOptions="Center"/>
-        <ImageButton BackgroundColor="Transparent" Source="icon_user.png" Grid.Column="4" HeightRequest="40" HorizontalOptions="Center"/>
+        <ImageButton BackgroundColor="Transparent" Source="icon_home.png" Grid.Column="0" HeightRequest="40" HorizontalOptions="Center" Clicked="ImageButton_Clicked"/>
+        <ImageButton BackgroundColor="Transparent" Source="icon_search.png" Grid.Column="1" HeightRequest="40" HorizontalOptions="Center" Clicked="ImageButton_Clicked_1"/>
     </Grid>
 </ContentView>

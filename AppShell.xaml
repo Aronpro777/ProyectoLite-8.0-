@@ -22,6 +22,10 @@
         Title="Principal"
         ContentTemplate="{DataTemplate pages:Principal}"
         Route="PrincipalPage" />
+    <ShellContent
+    Title="Principal"
+    ContentTemplate="{DataTemplate pages:Busqueda}"
+    Route="Busqueda" />
 
     <Shell.FlyoutHeader>
         <StackLayout Padding="20">

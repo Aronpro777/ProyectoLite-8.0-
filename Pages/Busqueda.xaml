@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoLite__8._0_.Pages.Busqueda"
+             BackgroundColor="White"
+             Shell.NavBarIsVisible="False">
+
+    <Grid Padding="15" RowDefinitions="Auto,*">
+        <!-- Barra superior con SearchBar -->
+        <StackLayout Grid.Row="0" Orientation="Vertical" Spacing="10" Margin="0,20,0,0">
+            <Label Text="Buscar receta"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   TextColor="#A94438"
+                   HorizontalOptions="Start" />
+            <SearchBar Placeholder="Escribe aquí..."
+                       x:Name="SearchBarRecetas"
+                       TextColor="Black"
+                       PlaceholderColor="#999999"
+                       CancelButtonColor="#A94438"
+                       SearchCommand="{Binding BuscarCommand}"
+                       SearchCommandParameter="{Binding Source={x:Reference SearchBarRecetas}, Path=Text}"
+                       BackgroundColor="#F5F5F5"
+                       HeightRequest="45"
+                       FontSize="14" />
+            <ImageButton Source="icon_home.png"
+                         BackgroundColor="#A94438"
+                         Clicked="ImageButton_Clicked"
+                         HeightRequest="70"
+                         WidthRequest="70"
+                         HorizontalOptions="Center"
+                         CornerRadius="10"
+                         Margin="0,10,0,0" />private async void ImageButton_Clicked(object sender, EventArgs e)
+{
+    string texto = SearchBarRecetas.Text?.Trim().ToLower();
+
+    if (string.IsNullOrWhiteSpace(texto))
+    {
+        await DisplayAlert("Aviso", "Escribe algo para buscar.", "OK");
+        return;
+    }
+
+    // Buscar coincidencia (exacta o parcial)
+    var recetaEncontrada = todasLasRecetas
+        .FirstOrDefault(r => r.Titulo.ToLower().Contains(texto));
+
+    if (recetaEncontrada != null)
+    {
+        await Shell.Current.GoToAsync($"Producto?RecetaId={recetaEncontrada.Id}");
+    }
+    else
+    {
+        await DisplayAlert("No encontrado", "No se encontró ninguna receta con ese nombre.", "OK");
+    }
+}
+
+
+        </StackLayout>
+
+        <!-- Contenido opcional (puedes colocar resultados aquí después) -->
+        <Label Grid.Row="1" Text="Resultados aparecerán aquí..."
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               TextColor="#A94438"
+               FontAttributes="Italic"
+               FontSize="14" />
+    </Grid>
+</ContentPage>

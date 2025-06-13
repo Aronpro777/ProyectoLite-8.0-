@@ -17,7 +17,7 @@
                    FontAttributes="Bold"
                    HorizontalOptions="Center"/>
 
-            <Label Text="{Binding Receta.Descripcion}" 
+            <Label Text="Paso 1: Precalienta el horno a 160°C (325°F).&#x0a;Paso 2: Para la base, mezcla las galletas María molidas con la mantequilla derretida hasta obtener una pasta arenosa. Presiona firmemente esta mezcla en el fondo de un molde para pay de 15 cm (6 pulgadas). &#x0a;Paso 3: Para el relleno, en un tazón grande, bate el queso crema hasta que esté suave y cremoso. Agrega la leche condensada y continúa batiendo hasta integrar. &#x0a;Paso 4: Incorpora el huevo, la esencia de vainilla y el jugo de limón (si lo usas). Bate hasta que la mezcla sea homogénea, evitando batir en exceso para no incorporar demasiado aire. &#x0a;Paso 5: Vierte el relleno sobre la base de galleta en el molde.&#x0a;Paso 6: Hornea durante 30-35 minutos, o hasta que el centro del pay esté casi firme, pero aún se mueva ligeramente al agitarlo suavemente. El borde debe estar dorado. &#x0a;Paso 7: Apaga el horno, abre ligeramente la puerta y deja el pay dentro por 15 minutos. Luego, retíralo y deja enfriar completamente a temperatura ambiente.&#x0a;Paso 8: Refrigera el pay de queso por al menos 4 horas o idealmente toda la noche antes de servir. Decora con mermelada de fresa"
                    FontSize="16"/>
         </VerticalStackLayout>
     </ScrollView>
