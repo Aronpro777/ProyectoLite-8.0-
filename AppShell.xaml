@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ProyectoLite__8._0_.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ProyectoLite__8._0_"
+    xmlns:pages="clr-namespace:ProyectoLite__8._0_.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.TabBarIsVisible="False">
+
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate pages:LoginPage}"
+        Route="LoginPage" />
+
+    <ShellContent
+        Title="Register"
+        ContentTemplate="{DataTemplate pages:RegisterPage}"
+        Route="RegisterPage" />
+
+    <ShellContent
+        Title="Principal"
+        ContentTemplate="{DataTemplate pages:Principal}"
+        Route="PrincipalPage" />
+
+    <Shell.FlyoutHeader>
+        <StackLayout Padding="20">
+            <Label Text="Menú" FontSize="20" FontAttributes="Bold"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutContent>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Label Text="Principal" FontSize="18" Padding="0,10" />
+                <Label Text="Mis Recetas" FontSize="18" Padding="0,10" />
+                <Label Text="Favoritas" FontSize="18" Padding="0,10" />
+                <Label Text="Cerrar Sesión" FontSize="18" Padding="0,10" />
+            </StackLayout>
+        </ScrollView>
+    </Shell.FlyoutContent>
+
+</Shell>

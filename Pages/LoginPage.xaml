@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoLite__8._0_.Pages.LoginPage"
+             BackgroundColor="#FFF8F0"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto, *, Auto">
+        <StackLayout Grid.Row="0" BackgroundColor="#A94438" Padding="20" Spacing="5">
+            <!-- Se actualiza la ruta de la imagen a logo1.jpg -->
+            <Image Source="logo1.jpg" HeightRequest="80" HorizontalOptions="Center"/>
+            <Label Text="Sweet Bake"
+                   FontSize="28"
+                   FontFamily="serif"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+            <Label Text="Dulces momentos, recetas perfectas."
+                   FontSize="14"
+                   TextColor="White"
+                   HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout Padding="30, 20" Spacing="25" VerticalOptions="Center">
+
+                <Label Text="INICIAR SESIÓN"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="#42251B"
+                       HorizontalOptions="Center"/>
+
+                <Frame BackgroundColor="White"
+                       CornerRadius="10"
+                       HasShadow="True"
+                       Padding="15">
+                    <StackLayout Spacing="15">
+                        <Entry x:Name="EntryUsername"
+                               Placeholder="Nombre de Usuario"
+                               PlaceholderColor="#8D8D8D"
+                               TextColor="#42251B"
+                               FontSize="16"
+                               HeightRequest="45"
+                               Keyboard="Text"/>
+
+                        <Entry x:Name="EntryPassword"
+                               Placeholder="Contraseña"
+                               PlaceholderColor="#8D8D8D"
+                               TextColor="#42251B"
+                               FontSize="16"
+                               HeightRequest="45"
+                               IsPassword="True"/>
+
+                        <Button Text="ACCEDER"
+                                BackgroundColor="#F0624E"
+                                TextColor="White"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                CornerRadius="10"
+                                HeightRequest="50"
+                                Clicked="OnLoginClicked"/>
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Spacing="5">
+                    <Label Text="¿No tienes una cuenta?"
+                           TextColor="#42251B"
+                           FontSize="14"/>
+                    <Label Text="Regístrate aquí"
+                           TextColor="#F0624E"
+                           FontSize="14"
+                           FontAttributes="Bold">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnRegisterClicked"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <BoxView Grid.Row="2" HeightRequest="20" BackgroundColor="Transparent"/>
+    </Grid>
+</ContentPage>
